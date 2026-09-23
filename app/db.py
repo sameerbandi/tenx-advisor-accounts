@@ -28,7 +28,10 @@ CREATE TABLE IF NOT EXISTS transfers (
     from_account TEXT NOT NULL REFERENCES accounts(id),
     to_account TEXT NOT NULL REFERENCES accounts(id),
     amount REAL NOT NULL,
-    created_at TEXT NOT NULL
+    created_at TEXT NOT NULL,
+    idempotency_key TEXT UNIQUE,
+    from_balance REAL,
+    to_balance REAL
 );
 CREATE TABLE IF NOT EXISTS transactions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
