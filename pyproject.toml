@@ -1,0 +1,10 @@
+[tool.pyrefly]
+search-path = ["."]
+site-package-path = [".venv/Lib/site-packages"]
+python-interpreter-path = "d:/python-developer-starter/advisor-accounts/.venv/Scripts/python.exe"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
