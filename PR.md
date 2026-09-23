@@ -14,3 +14,8 @@
 
 ### What was not changed & why
 - SQLite column types (`REAL`) were preserved to prevent migration issues with existing databases; precision is strictly managed in the application layer instead.
+
+
+
+
+

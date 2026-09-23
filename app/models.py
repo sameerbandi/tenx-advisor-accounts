@@ -12,3 +12,15 @@ class TransferResponse(BaseModel):
     transfer_id: str
     from_balance: str
     to_balance: str
+
+
+class TransactionItem(BaseModel):
+    id: int
+    type: str
+    amount: str
+    created_at: str
+
+
+class TransactionListResponse(BaseModel):
+    items: list[TransactionItem]
+    next_cursor: str | None = None
